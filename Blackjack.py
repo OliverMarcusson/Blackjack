@@ -156,7 +156,7 @@ def main():  # Main loop
                 credits = credits + check_hand(player_hand, dealer_hand, shoe, bet, 1)
                 break
             
-        print('Would you like to play again? [y / n]')
+        print('\nWould you like to play again? [y / n]')
         ans = input(':')
         if ans == 'n':
             break
