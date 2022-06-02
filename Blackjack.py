@@ -1,13 +1,13 @@
 import random as r
-import dealer as d
+import extensions.dealer as d
 import time as t
 import os
 import math as m
 
 """ TODO
 
-Insurance
-Recognize when dealer or player has blackjack
+Ace can turn into one or eleven
+Split hand?
 Saving progress to file
 
 """
@@ -119,10 +119,12 @@ def main():  # Main loop
     credits = 1000
     shoe = d.make_shoe_obj(3, 200)
     
-    # blkjack_art = open('Blackjack_art.txt', 'r', 4096, 'unicode_escape')
-    # print(blkjack_art.readlines())
-    # blkjack_art.close()
-    print("Blackjack, by Oliver Marcusson")
+    path = f"{os.path.dirname(__file__)}\\extensions\\Blackjack_art.txt"
+    blkjack_art = open(path, 'r', 8192, 'utf-8')
+    print(blkjack_art.read())
+    
+    blkjack_art.close()
+    # print("Blackjack, by Oliver Marcusson")
     t.sleep(3)
     os.system('cls')
     
@@ -149,7 +151,8 @@ def main():  # Main loop
             insurance = input(':')
             if insurance == 'y':
                 credits = credits - m.floor(credits * 0.05)
-            credits = credits + int(check_hand(player_hand, dealer_hand, shoe, bet, 1, insurance))
+            if dealer_hand.v_cards in blackjack_hands:
+                credits = credits + int(check_hand(player_hand, dealer_hand, shoe, bet, 1, insurance))
                  
         # Blackjack Round Loop
         while True:
@@ -187,7 +190,9 @@ def main():  # Main loop
             break
         else:
             os.system('cls')
-            
+    
+    # save_file = open('save_file.sav', 'w')
+    # save_file.close()            
 
 if __name__ == "__main__":
     main()
