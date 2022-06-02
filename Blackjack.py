@@ -8,6 +8,7 @@ import math as m
 
 Insurance
 Recognize when dealer or player has blackjack
+Saving progress to file
 
 """
 
