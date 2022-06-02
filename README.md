@@ -8,6 +8,7 @@ My first real python project.
 - [ ] Make a new shoe when previous one is empty
 - [ ] The player doesn't have to press enter every time they want to preform an action, instead just press a number.
 - [ ] Player can't bet over max bet amount.
+- [ ] Log round loop to look for bugs.
 
 ## Can MAYBE happen List:
 - [ ] Multiplayer support?
