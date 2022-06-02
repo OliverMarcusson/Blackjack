@@ -1,7 +1,7 @@
 import random as r
 
 card_colors = ['♥', '♠', '♦', '♣']
-card_numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Knight', 'Queen', 'King', 'Ace']
+card_numbers = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Knight', 'Queen', 'King', 'Ace']
 
 
 class Shoe:
@@ -17,7 +17,7 @@ class Card:
 
 
 def get_random_card():
-    return f"{card_colors[r.randint(0,3)]} {card_numbers[r.randint(0,13)]}"
+    return f"{card_colors[r.randint(0,3)]} {card_numbers[r.randint(0,12)]}"
 
 
 def get_card(color, number):
@@ -29,7 +29,7 @@ def make_deck(decks):
         deck = []
         for i in range(decks):
             for i in range(4):
-                for j in range(14): 
+                for j in range(13): 
                     deck.append(Card(card_colors[i], card_numbers[j]))
     return deck
 

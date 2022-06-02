@@ -17,12 +17,12 @@ ans = None
 blackjack_hands = []
 for i in range(4):
     for j in range(3):
-        string = [f"{card_colors[i]} 'Ace', '{card_colors[i]} {blackjack[j]}'"]
+        string = [f"'{card_colors[i]} Ace', '{card_colors[i]} {blackjack[j]}'"]
         blackjack_hands.append(string)
         
 for i in range(4):
     for j in range(3):
-        string = [f"'{card_colors[i]} {blackjack[j]}', {card_colors[i]} 'Ace'"]
+        string = [f"'{card_colors[i]} {blackjack[j]}', '{card_colors[i]} Ace'"]
         blackjack_hands.append(string)
     
 """
@@ -37,4 +37,4 @@ while not ans in blackjack_hands:
 
 print(blackjack_hands)
 
-# [["♥ 'Ace', '♥ Knight'"], ["♥ 'Ace', '♥ Queen'"], ["♥ 'Ace', '♥ King'"], ["♠ 'Ace', '♠ Knight'"], ["♠ 'Ace', '♠ Queen'"], ["♠ 'Ace', '♠ King'"], ["♦ 'Ace', '♦ Knight'"], ["♦ 'Ace', '♦ Queen'"], ["♦ 'Ace', '♦ King'"], ["♣ 'Ace', '♣ Knight'"], ["♣ 'Ace', '♣ Queen'"], ["♣ 'Ace', '♣ King'"], ["'♥ Knight', ♥ 'Ace'"], ["'♥ Queen', ♥ 'Ace'"], ["'♥ King', ♥ 'Ace'"], ["'♠ Knight', ♠ 'Ace'"], ["'♠ Queen', ♠ 'Ace'"], ["'♠ King', ♠ 'Ace'"], ["'♦ Knight', ♦ 'Ace'"], ["'♦ Queen', ♦ 'Ace'"], ["'♦ King', ♦ 'Ace'"], ["'♣ Knight', ♣ 'Ace'"], ["'♣ Queen', ♣ 'Ace'"], ["'♣ King', ♣ 'Ace'"]]
+# [['♥ Ace', '♥ Knight'], ['♥ Ace', '♥ Queen'], ['♥ Ace', '♥ King'], ['♠ Ace', '♠ Knight'], ['♠ Ace', '♠ Queen'], ['♠ Ace', '♠ King'], ['♦ Ace', '♦ Knight'], ['♦ Ace', '♦ Queen'], ['♦ Ace', '♦ King'], ['♣ Ace', '♣ Knight'], ['♣ Ace', '♣ Queen'], ['♣ Ace', '♣ King'], ['♥ Knight', '♥ Ace'], ['♥ Queen', '♥ Ace'], ['♥ King', '♥ Ace'], ['♠ Knight', '♠ Ace'], ['♠ Queen', '♠ Ace'], ['♠ King', '♠ Ace'], ['♦ Knight', '♦ Ace'], ['♦ Queen', '♦ Ace'], ['♦ King', '♦ Ace'], ['♣ Knight', '♣ Ace'], ['♣ Queen', '♣ Ace'], ['♣ King', '♣ Ace']]
