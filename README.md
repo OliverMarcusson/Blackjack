@@ -3,7 +3,7 @@ My first real python project.
 
 ## TODO List:
 ### High Priority:
-- [ ] Log round loop to look for bugs. (Activateable by tack)
+- [x] Log round loop to look for bugs.
 - [ ] Player can't bet over max bet amount.
 - [ ] Make a new shoe when previous one is empty.
 - [ ] Make it possible to save progress into savefile, and give user a name.
