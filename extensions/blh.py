@@ -2,7 +2,7 @@ import random as r
 
 card_colors = ['♥', '♠', '♦', '♣']
 card_numbers = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Knight', 'Queen', 'King', 'Ace']
-blackjack = ['Knight', 'Queen', 'King']
+blackjack = ['10', 'Knight', 'Queen', 'King']
 
 def make_deck(decks):
     for i in range(decks):
@@ -16,12 +16,12 @@ def make_deck(decks):
 ans = None
 blackjack_hands = []
 for i in range(4):
-    for j in range(3):
+    for j in range(4):
         string = [f"'{card_colors[i]} Ace', '{card_colors[i]} {blackjack[j]}'"]
         blackjack_hands.append(string)
         
 for i in range(4):
-    for j in range(3):
+    for j in range(4):
         string = [f"'{card_colors[i]} {blackjack[j]}', '{card_colors[i]} Ace'"]
         blackjack_hands.append(string)
     
@@ -37,4 +37,4 @@ while not ans in blackjack_hands:
 
 print(blackjack_hands)
 
-# [['♥ Ace', '♥ Knight'], ['♥ Ace', '♥ Queen'], ['♥ Ace', '♥ King'], ['♠ Ace', '♠ Knight'], ['♠ Ace', '♠ Queen'], ['♠ Ace', '♠ King'], ['♦ Ace', '♦ Knight'], ['♦ Ace', '♦ Queen'], ['♦ Ace', '♦ King'], ['♣ Ace', '♣ Knight'], ['♣ Ace', '♣ Queen'], ['♣ Ace', '♣ King'], ['♥ Knight', '♥ Ace'], ['♥ Queen', '♥ Ace'], ['♥ King', '♥ Ace'], ['♠ Knight', '♠ Ace'], ['♠ Queen', '♠ Ace'], ['♠ King', '♠ Ace'], ['♦ Knight', '♦ Ace'], ['♦ Queen', '♦ Ace'], ['♦ King', '♦ Ace'], ['♣ Knight', '♣ Ace'], ['♣ Queen', '♣ Ace'], ['♣ King', '♣ Ace']]
+# [['♥ Ace', '♥ 10'], ['♥ Ace', '♥ Knight'], ['♥ Ace', '♥ Queen'], ['♥ Ace', '♥ King'], ['♠ Ace', '♠ 10'], ['♠ Ace', '♠ Knight'], ['♠ Ace', '♠ Queen'], ['♠ Ace', '♠ King'], ['♦ Ace', '♦ 10'], ['♦ Ace', '♦ Knight'], ['♦ Ace', '♦ Queen'], ['♦ Ace', '♦ King'], ['♣ Ace', '♣ 10'], ['♣ Ace', '♣ Knight'], ['♣ Ace', '♣ Queen'], ['♣ Ace', '♣ King'], ['♥ 10', '♥ Ace'], ['♥ Knight', '♥ Ace'], ['♥ Queen', '♥ Ace'], ['♥ King', '♥ Ace'], ['♠ 10', '♠ Ace'], ['♠ Knight', '♠ Ace'], ['♠ Queen', '♠ Ace'], ['♠ King', '♠ Ace'], ['♦ 10', '♦ Ace'], ['♦ Knight', '♦ Ace'], ['♦ Queen', '♦ Ace'], ['♦ King', '♦ Ace'], ['♣ 10', '♣ Ace'], ['♣ Knight', '♣ Ace'], ['♣ Queen', '♣ Ace'], ['♣ King', '♣ Ace']]

@@ -3,6 +3,7 @@ import extensions.dealer as d
 import time as t
 import os
 import math as m
+import webbrowser
 
 """ TODO
 
@@ -14,7 +15,7 @@ Saving progress to file
 
 
 aces = ['♣ Ace', '♦ Ace', '♠ Ace', '♥ Ace']
-blackjack_hands = [['♥ Ace', '♥ Knight'], ['♥ Ace', '♥ Queen'], ['♥ Ace', '♥ King'], ['♠ Ace', '♠ Knight'], ['♠ Ace', '♠ Queen'], ['♠ Ace', '♠ King'], ['♦ Ace', '♦ Knight'], ['♦ Ace', '♦ Queen'], ['♦ Ace', '♦ King'], ['♣ Ace', '♣ Knight'], ['♣ Ace', '♣ Queen'], ['♣ Ace', '♣ King'], ['♥ Knight', '♥ Ace'], ['♥ Queen', '♥ Ace'], ['♥ King', '♥ Ace'], ['♠ Knight', '♠ Ace'], ['♠ Queen', '♠ Ace'], ['♠ King', '♠ Ace'], ['♦ Knight', '♦ Ace'], ['♦ Queen', '♦ Ace'], ['♦ King', '♦ Ace'], ['♣ Knight', '♣ Ace'], ['♣ Queen', '♣ Ace'], ['♣ King', '♣ Ace']]
+blackjack_hands = [['♥ Ace', '♥ 10'], ['♥ Ace', '♥ Knight'], ['♥ Ace', '♥ Queen'], ['♥ Ace', '♥ King'], ['♠ Ace', '♠ 10'], ['♠ Ace', '♠ Knight'], ['♠ Ace', '♠ Queen'], ['♠ Ace', '♠ King'], ['♦ Ace', '♦ 10'], ['♦ Ace', '♦ Knight'], ['♦ Ace', '♦ Queen'], ['♦ Ace', '♦ King'], ['♣ Ace', '♣ 10'], ['♣ Ace', '♣ Knight'], ['♣ Ace', '♣ Queen'], ['♣ Ace', '♣ King'], ['♥ 10', '♥ Ace'], ['♥ Knight', '♥ Ace'], ['♥ Queen', '♥ Ace'], ['♥ King', '♥ Ace'], ['♠ 10', '♠ Ace'], ['♠ Knight', '♠ Ace'], ['♠ Queen', '♠ Ace'], ['♠ King', '♠ Ace'], ['♦ 10', '♦ Ace'], ['♦ Knight', '♦ Ace'], ['♦ Queen', '♦ Ace'], ['♦ King', '♦ Ace'], ['♣ 10', '♣ Ace'], ['♣ Knight', '♣ Ace'], ['♣ Queen', '♣ Ace'], ['♣ King', '♣ Ace']]
 
 
 class Hand:
@@ -79,6 +80,15 @@ def check_hand(hand, d_hand, shoe, bet, stand, insurance):  # Check hand functio
         print(f"\nPlayer hand: {hand.v_cards} | Value: {str(hand.value)}")
         print("\n-------------------")
         
+        if d_hand.value < hand.value:  # Player wins
+            if hand.v_cards in blackjack_hands:
+                award = bet * 1.5
+                print(f"Blackjack 21! You won {bet} credits.")
+            else:
+                print(f"Player hand beats dealer hand! You won {bet} credits.")
+                award = bet
+            return award
+        
         if d_hand.value == hand.value:  # Dealer Push
             print("Dealer Push! You win back your bet.")
             award = 0
@@ -99,16 +109,6 @@ def check_hand(hand, d_hand, shoe, bet, stand, insurance):  # Check hand functio
         if d_hand.value > 21:  # Dealer bust
             print(f"Dealer bust! You won {bet} credits.")
             award = bet
-            return award
-        
-        if d_hand.value < hand.value:  # Player wins
-            if hand.v_cards in blackjack_hands:
-                print(f"Blackjack 21! You won {bet} credits.")
-                award = bet * 1.5
-            else:
-                print(f"Player hand beats dealer hand! You won {bet} credits.")
-                award = bet
-            
             return award
         
     else:
@@ -140,11 +140,12 @@ def main():  # Main loop
         dealer_hand = Hand([shoe.cards.pop(), shoe.cards.pop()])
         dealer_hand.v_cards[0] = 'Hidden'
         
-        if dealer_hand.v_cards in blackjack_hands:
+        if dealer_hand.v_cards in blackjack_hands or player_hand.v_cards in blackjack_hands:
             credits = credits + int(check_hand(player_hand, dealer_hand, shoe, bet, 1, 'n'))
         
         # Prompt Insurance
         insurance = 'n'
+        dealer_blackjack = None
         if dealer_hand.v_cards[1] in aces:
             print(f"\nDealer hand: {dealer_hand.v_cards} | Value: ?")
             print("Dealer has an Ace. Do you want to buy insurance? [y / n]")
@@ -152,7 +153,10 @@ def main():  # Main loop
             if insurance == 'y':
                 credits = credits - m.floor(credits * 0.05)
             if dealer_hand.v_cards in blackjack_hands:
+                dealer_blackjack = True
                 credits = credits + int(check_hand(player_hand, dealer_hand, shoe, bet, 1, insurance))
+            else:
+                dealer_blackjack = False
                  
         # Blackjack Round Loop
         while True:
@@ -164,6 +168,8 @@ def main():  # Main loop
             print(f"Dealer hand: {dealer_hand.v_cards} | Value: ?")
             print(f"\nPlayer hand: {player_hand.v_cards} | Value: {str(player_hand.value)}")
             print("\n-------------------")
+            if dealer_blackjack == False:
+                print("Dealer did not have a blackjack.")
             print('\nWhat would you like to do?\n1. Hit\n2. Stand\n3. Double down')
             ans = int(input(":"))
             
@@ -187,7 +193,13 @@ def main():  # Main loop
         print('\nWould you like to play again? [y / n]')
         ans = input(':')
         if ans == 'n':
-            break
+            print("Okay! Do you want to visit this project's github page? [y / n]")
+            ans = input(':')
+            if ans == 'y':
+                webbrowser.open('https://github.com/OliverMarcusson/Blackjack/', 2, True)
+                break
+            else:
+                break
         else:
             os.system('cls')
     
