@@ -3,6 +3,7 @@ import extensions.dealer as d
 import time as t
 import os
 import math as m
+import webbrowser
 
 """ TODO
 
@@ -192,7 +193,13 @@ def main():  # Main loop
         print('\nWould you like to play again? [y / n]')
         ans = input(':')
         if ans == 'n':
-            break
+            print("Okay! Do you want to visit this project's github page? [y / n]")
+            ans = input(':')
+            if ans == 'y':
+                webbrowser.open('https://github.com/OliverMarcusson/Blackjack/', 2, True)
+                break
+            else:
+                break
         else:
             os.system('cls')
     
