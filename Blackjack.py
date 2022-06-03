@@ -4,6 +4,7 @@ import time as t
 import os
 import math as m
 import webbrowser
+import sys
 
 """ TODO
 
@@ -12,8 +13,8 @@ Split hand?
 Saving progress to file
 
 """
-
-
+log = open('log.txt', 'w', 8192, 'utf-8')
+sys.stdout = log
 aces = ['♣ Ace', '♦ Ace', '♠ Ace', '♥ Ace']
 blackjack_hands = [['♥ Ace', '♥ 10'], ['♥ Ace', '♥ Knight'], ['♥ Ace', '♥ Queen'], ['♥ Ace', '♥ King'], ['♠ Ace', '♠ 10'], ['♠ Ace', '♠ Knight'], ['♠ Ace', '♠ Queen'], ['♠ Ace', '♠ King'], ['♦ Ace', '♦ 10'], ['♦ Ace', '♦ Knight'], ['♦ Ace', '♦ Queen'], ['♦ Ace', '♦ King'], ['♣ Ace', '♣ 10'], ['♣ Ace', '♣ Knight'], ['♣ Ace', '♣ Queen'], ['♣ Ace', '♣ King'], ['♥ 10', '♥ Ace'], ['♥ Knight', '♥ Ace'], ['♥ Queen', '♥ Ace'], ['♥ King', '♥ Ace'], ['♠ 10', '♠ Ace'], ['♠ Knight', '♠ Ace'], ['♠ Queen', '♠ Ace'], ['♠ King', '♠ Ace'], ['♦ 10', '♦ Ace'], ['♦ Knight', '♦ Ace'], ['♦ Queen', '♦ Ace'], ['♦ King', '♦ Ace'], ['♣ 10', '♣ Ace'], ['♣ Knight', '♣ Ace'], ['♣ Queen', '♣ Ace'], ['♣ King', '♣ Ace']]
 
@@ -97,9 +98,13 @@ def check_hand(hand, d_hand, shoe, bet, stand, insurance):  # Check hand functio
         if d_hand.value > hand.value and d_hand.value <= 21:  # Dealer wins
             if d_hand.v_cards in blackjack_hands and insurance == 'y':
                 print(f"Dealer Blackjack! You get your bet back (insurance)")
+                award = 0
+                return award
             
             elif d_hand.v_cards in blackjack_hands and insurance != 'y':
                 print(f"Dealer Blackjack! You lost {bet} credits.")
+                award = bet * -1
+                return award
             
             else:
                 print(f"Dealer hand beats player hand! You lost {bet} credits.")
@@ -197,6 +202,7 @@ def main():  # Main loop
             ans = input(':')
             if ans == 'y':
                 webbrowser.open('https://github.com/OliverMarcusson/Blackjack/', 2, True)
+                log.close()
                 break
             else:
                 break

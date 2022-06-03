@@ -1,0 +1,184 @@
+$$$$$$$\  $$\                     $$\         $$$$$\                     $$\       
+$$  __$$\ $$ |                    $$ |        \__$$ |                    $$ |      
+$$ |  $$ |$$ | $$$$$$\   $$$$$$$\ $$ |  $$\      $$ | $$$$$$\   $$$$$$$\ $$ |  $$\ 
+$$$$$$$\ |$$ | \____$$\ $$  _____|$$ | $$  |     $$ | \____$$\ $$  _____|$$ | $$  |
+$$  __$$\ $$ | $$$$$$$ |$$ /      $$$$$$  /$$\   $$ | $$$$$$$ |$$ /      $$$$$$  / 
+$$ |  $$ |$$ |$$  __$$ |$$ |      $$  _$$< $$ |  $$ |$$  __$$ |$$ |      $$  _$$<  
+$$$$$$$  |$$ |\$$$$$$$ |\$$$$$$$\ $$ | \$$\\$$$$$$  |\$$$$$$$ |\$$$$$$$\ $$ | \$$\ 
+\_______/ \__| \_______| \_______|\__|  \__|\______/  \_______| \_______|\__|  \__|
+
+𝔹 𝕪 : 𝕆 𝕝 𝕚 𝕧 𝕖 𝕣  𝕄 𝕒 𝕣 𝕔 𝕦 𝕤 𝕤 𝕠 𝕟
+You have 1000 credits.
+How much do you want to bet? [Max: 500]
+:Bet: 1 credits | Press ENTER to deal.Dealer hand: ['Hidden', '♥ 10'] | Value: ?
+
+Player hand: ['♣ 5', '♥ 2'] | Value: 7
+
+-------------------
+
+What would you like to do?
+1. Hit
+2. Stand
+3. Double down
+:7
+Dealer hand: ['♦ King', '♥ 10'] | Value: 20
+
+Player hand: ['♣ 5', '♥ 2'] | Value: 7
+
+-------------------
+Dealer hand beats player hand! You lost 1 credits.
+
+Would you like to play again? [y / n]
+:You have 999 credits.
+How much do you want to bet? [Max: 499]
+:Bet: 1 credits | Press ENTER to deal.
+Dealer hand: ['Hidden', '♠ Ace'] | Value: ?
+Dealer has an Ace. Do you want to buy insurance? [y / n]
+:Dealer hand: ['Hidden', '♠ Ace'] | Value: ?
+
+Player hand: ['♦ Ace', '♣ Knight'] | Value: 21
+
+-------------------
+Dealer did not have a blackjack.
+
+What would you like to do?
+1. Hit
+2. Stand
+3. Double down
+:21
+Dealer hand: ['♦ Queen', '♠ Ace'] | Value: 21
+
+Player hand: ['♦ Ace', '♣ Knight'] | Value: 21
+
+-------------------
+Dealer Push! You win back your bet.
+
+Would you like to play again? [y / n]
+:You have 999 credits.
+How much do you want to bet? [Max: 499]
+:Bet: 1 credits | Press ENTER to deal.Dealer hand: ['Hidden', '♦ 10'] | Value: ?
+
+Player hand: ['♦ 4', '♦ 9'] | Value: 13
+
+-------------------
+
+What would you like to do?
+1. Hit
+2. Stand
+3. Double down
+:13
+Dealer hand: ['♦ Knight', '♦ 10'] | Value: 20
+
+Player hand: ['♦ 4', '♦ 9'] | Value: 13
+
+-------------------
+Dealer hand beats player hand! You lost 1 credits.
+
+Would you like to play again? [y / n]
+:You have 998 credits.
+How much do you want to bet? [Max: 499]
+:Bet: 1 credits | Press ENTER to deal.Dealer hand: ['Hidden', '♦ 8'] | Value: ?
+
+Player hand: ['♣ 6', '♦ 9'] | Value: 15
+
+-------------------
+
+What would you like to do?
+1. Hit
+2. Stand
+3. Double down
+:15
+Dealer hand: ['♥ 7', '♦ 8', '♦ 9'] | Value: 24
+
+Player hand: ['♣ 6', '♦ 9'] | Value: 15
+
+-------------------
+Dealer bust! You won 1 credits.
+
+Would you like to play again? [y / n]
+:You have 999 credits.
+How much do you want to bet? [Max: 499]
+:Bet: 1 credits | Press ENTER to deal.Dealer hand: ['Hidden', '♠ Knight'] | Value: ?
+
+Player hand: ['♥ Queen', '♦ 7'] | Value: 17
+
+-------------------
+
+What would you like to do?
+1. Hit
+2. Stand
+3. Double down
+:17
+Dealer hand: ['♦ 8', '♠ Knight'] | Value: 18
+
+Player hand: ['♥ Queen', '♦ 7'] | Value: 17
+
+-------------------
+Dealer hand beats player hand! You lost 1 credits.
+
+Would you like to play again? [y / n]
+:You have 998 credits.
+How much do you want to bet? [Max: 499]
+:Bet: 1 credits | Press ENTER to deal.Dealer hand: ['Hidden', '♠ King'] | Value: ?
+
+Player hand: ['♦ 6', '♦ 5'] | Value: 11
+
+-------------------
+
+What would you like to do?
+1. Hit
+2. Stand
+3. Double down
+:11
+Dealer hand: ['♦ 4', '♠ King', '♦ 3'] | Value: 17
+
+Player hand: ['♦ 6', '♦ 5'] | Value: 11
+
+-------------------
+Dealer hand beats player hand! You lost 1 credits.
+
+Would you like to play again? [y / n]
+:You have 997 credits.
+How much do you want to bet? [Max: 498]
+:Bet: 1 credits | Press ENTER to deal.Dealer hand: ['Hidden', '♣ Queen'] | Value: ?
+
+Player hand: ['♥ King', '♣ 3'] | Value: 13
+
+-------------------
+
+What would you like to do?
+1. Hit
+2. Stand
+3. Double down
+:13
+Dealer hand: ['♠ Knight', '♣ Queen'] | Value: 20
+
+Player hand: ['♥ King', '♣ 3'] | Value: 13
+
+-------------------
+Dealer hand beats player hand! You lost 1 credits.
+
+Would you like to play again? [y / n]
+:You have 996 credits.
+How much do you want to bet? [Max: 498]
+:Bet: 1 credits | Press ENTER to deal.Dealer hand: ['Hidden', '♦ King'] | Value: ?
+
+Player hand: ['♦ 2', '♠ Ace'] | Value: 13
+
+-------------------
+
+What would you like to do?
+1. Hit
+2. Stand
+3. Double down
+:13
+Dealer hand: ['♦ 2', '♦ King', '♣ Ace'] | Value: 23
+
+Player hand: ['♦ 2', '♠ Ace'] | Value: 13
+
+-------------------
+Dealer bust! You won 1 credits.
+
+Would you like to play again? [y / n]
+:Okay! Do you want to visit this project's github page? [y / n]
+:
